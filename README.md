@@ -1,6 +1,6 @@
 # Interpreting daily changes in recorded Facebook SMS-verification prices
 
-[Rendered research report](report/report.html) (download/open in a browser) · [View the figures](output/figures/) · [Validation and reproducibility](docs/VALIDATION_AND_REPRODUCIBILITY.md)
+[**View the full research report (PDF)**](report/report.pdf) · [HTML version](report/report.html) · [View the figures](output/figures/) · [Validation and reproducibility](docs/VALIDATION_AND_REPRODUCIBILITY.md)
 
 **Research question.** For Facebook SMS verifications using UK, US and Indonesian phone numbers from 1 August 2024 to 27 July 2025, how much of the daily change in COTSI's recorded stock-weighted price reflects within-vendor recorded-price changes versus advertised-stock-share reweighting on consecutive days with the same positive-stock vendors?
 
@@ -24,7 +24,7 @@ Python reads every intended archive member in chunks, filters and reshapes the d
 | US | 326 | 258 | 153 |
 | Indonesia (ID) | 350 | 196 | 210 |
 
-The price-component pattern was clearest in the US and less pronounced in Indonesia. Three **8–10 July 2025** movements in recorded SMSHub USD quotes strongly influence mean price-component magnitudes in the UK and Indonesia, so medians give important context for a typical eligible pair. The large observations passed the implemented arithmetic checks but may still reflect upstream reporting issues. Changing-set pairs' share of total absolute combined-price movement was smaller than their share of valid pairs in all three markets; their median absolute movements were nevertheless higher, particularly in the UK. These exclusions are not inconsequential, and the decomposition describes only eligible stable-set pairs. The [report](report/report.html) gives the numerical results and interpretation.
+The price-component pattern was clearest in the US and less pronounced in Indonesia. Three **8–10 July 2025** movements in recorded SMSHub USD quotes strongly influence mean price-component magnitudes in the UK and Indonesia, so medians give important context for a typical eligible pair. The large observations passed the implemented arithmetic checks but may still reflect upstream reporting issues. Changing-set pairs' share of total absolute combined-price movement was smaller than their share of valid pairs in all three markets; their median absolute movements were nevertheless higher, particularly in the UK. These exclusions are not inconsequential, and the decomposition describes only eligible stable-set pairs. The [report](report/report.pdf) gives the numerical results and interpretation.
 
 ## Repository structure
 
@@ -32,6 +32,7 @@ The price-component pattern was clearest in the US and less pronounced in Indone
 python/prepare_data.py                Data preparation and validation
 R/analyze_prices.R                    Decomposition, summaries and figures
 report/report.qmd                     Quarto source
+report/report.pdf                     PDF report
 report/report.html                    Rendered report with embedded figures
 output/tables/                        Two concise validated result tables
 output/figures/                       Two validated figures
